@@ -1,0 +1,116 @@
+	Langkah – Langkah cek hard di windows
+
+1.	 Klik windows + E  
+	Kemudian klik kanan pada “This pc”
+
+2.	 Lalu pilih “properties”
+ 
+3.	Pada bagian ini akan menampilkan halaman "About" (Tentang) dari System Settings di Windows:
+
+•	Komputer ini adalah ASUS Vivobook Go E1404FA.
+•	Menggunakan Windows 11 Home Single Language versi 25H2.
+•	Memiliki prosesor AMD Ryzen 5 7520U with Radeon Graphics (2.80 GHz) dan RAM 8 GB (7.28 GB usable).
+•	Sistem berjalan dalam arsitektur 64-bit (x64-based processor).
+•	Tidak mendukung layar sentuh atau stylus.
+•	Instalasi Windows dilakukan pada 26 Juni 2025.
+
+	Langkah – langkah melihat memory,core dan theard  pada windows 
+
+4.	Klik ctrl + shift + esc  
+ 
+5.	Klik garis tiga di kiri atas 
+   
+6.	Lalu pilih “performance” 
+
+7.	Task Manager digunakan untuk melihat penggunaan sumber daya sistem seperti RAM.
+Terlihat total RAM 8.0 GB, dengan sekitar 5.9 GB sedang digunakan (81%), dan 1.4 GB masih tersedia. Sebagian memori juga digunakan sebagai cache (1.2 GB). Hal ini menunjukkan penggunaan memori cukup tinggi, tetapi sistem masih memiliki ruang yang bisa digunakan.
+Task Manager menampilkan penggunaan RAM sebesar 5.9 GB dari total 8.0 GB, dengan 1.4 GB masih tersedia.
+ 
+8.	Lalu pilih “CPU”.pada bagian kanan dapat melihat :
+•	Task Manager juga digunakan untuk memantau kinerja CPU.
+Terlihat penggunaan CPU sebesar 5% dengan kecepatan sekitar 2.14 GHz. Prosesor yang digunakan adalah AMD Ryzen 5 7520U dengan 4 core dan 8 logical processor. Hal ini menunjukkan CPU sedang dalam kondisi ringan atau tidak terbebani.
+•	Penggunaan CPU sebesar 5% dengan kecepatan 2.14 GHz, menandakan beban sistem masih ringan.
+
+  
+9.	Perintah free -h digunakan untuk melihat penggunaan RAM dan swap.
+Pada sistem terlihat total RAM 3.8 GB, dengan 1.6 GB sedang digunakan dan 312 MB benar-benar kosong. Sebagian memori digunakan sebagai cache (2.5 GB), sehingga total memori yang masih bisa dimanfaatkan mencapai 2.3 GB. Swap tidak digunakan (0B), menandakan RAM masih mencukupi. 
+free -h menampilkan penggunaan RAM dan swap. RAM 3.8 GB, terpakai 1.6 GB, tersedia 2.3 GB, dan swap tidak digunakan.
+
+ 
+10.	Perintah htop digunakan untuk memantau penggunaan CPU, memori, dan proses yang berjalan secara real-time.
+•	Terlihat penggunaan CPU sekitar 3.2% dan RAM terpakai 1.53 GB dari total 3.82 GB. Terdapat 112 proses aktif dengan 1 proses sedang berjalan. Load average rendah, menunjukkan sistem dalam kondisi ringan dan stabil. htop menampilkan penggunaan CPU 3.2% dan RAM 1.53 GB dari 3.82 GB, dengan 112 proses aktif, menandakan sistem berjalan ringan.
+
+   
+11.	Perintah cat /proc/meminfo digunakan untuk melihat detail penggunaan memori secara lengkap di Linux.
+•	Terlihat total memori sekitar 4.0 GB, dengan memori bebas sekitar 286 MB dan memori yang masih tersedia sekitar 2.1 GB. Sebagian besar memori digunakan sebagai cache (±2.5 GB). Swap tidak digunakan (0 kB), sehingga sistem masih mengandalkan RAM sepenuhnya.
+    
+12.	Perintah cat /proc/cpuinfo digunakan untuk melihat     informasi detail tentang CPU pada sistem. 
+•	Terlihat prosesor yang digunakan adalah AMD Ryzen 5 7520U with Radeon Graphics dengan kecepatan sekitar 2.79 GHz. CPU memiliki 1 core, dan mendukung berbagai fitur seperti virtualisasi dan instruksi modern lainnya. Seperti proc/cpuinfo menampilkan CPU AMD Ryzen 5 7520U dengan kecepatan ±2.79 GHz dan fitur prosesor yang lengkap.
+ 
+13.	Perintah lscpu digunakan untuk menampilkan informasi arsitektur dan spesifikasi CPU. 
+•	Terlihat sistem menggunakan arsitektur x86_64 dengan prosesor AMD Ryzen 5 7520U. CPU memiliki 1 core dan 1 thread, mendukung mode 32-bit dan 64-bit, serta berjalan pada lingkungan virtualisasi (KVM).
+
+   
+14.	Perintah swapon --summary digunakan untuk melihat informasi penggunaan swap pada sistem. 
+•	Terlihat terdapat swap berupa file (/swap.img) dengan ukuran sekitar 4 GB, namun tidak digunakan (0). Hal ini menunjukkan bahwa sistem masih memiliki cukup RAM sehingga swap belum diperlukan.
+
+
+15.	Perintah vmstat -s digunakan untuk menampilkan statistik penggunaan memori, CPU, dan aktivitas sistem secara ringkas.
+•	Terlihat total memori sekitar 4.0 GB, dengan sebagian digunakan dan sekitar 1.1 GB masih bebas. Swap tersedia sekitar 4.0 GB namun tidak digunakan. Aktivitas CPU didominasi oleh proses idle, menandakan sistem tidak dalam beban berat.
+   
+16.	Perintah ps aux --sort=%mem | head digunakan untuk menampilkan daftar proses yang diurutkan berdasarkan penggunaan memori tertinggi.
+•	Pada hasil terlihat beberapa proses sistem seperti kthreadd dan kworker, namun semuanya menggunakan 0.0% memori, menandakan penggunaan memori sangat kecil dan sistem dalam kondisi ringan.
+
+   
+17.	Perintah yang digunakan menunjukkan proses pembuatan folder dan file serta menjalankan script di Linux.
+•	Pengguna membuat folder ayn, lalu membuat file tes.py dan nuri.sih. File nuri.sih diberi izin eksekusi menggunakan chmod +x, namun saat dijalankan terjadi error karena perintah di dalam file tidak dikenali.
+   
+18.	Tampilan ini merupakan desktop utama sistem operasi Ubuntu setelah berhasil login. Terlihat antarmuka grafis dengan wallpaper bawaan serta sidebar yang berisi aplikasi seperti terminal dan file manager. Hal ini menunjukkan sistem sudah berjalan normal dan siap digunakan.
+
+   
+19.	Perintah sudo reboot digunakan untuk me-restart sistem Linux. Perintah ini dijalankan dengan hak akses administrator, agar sistem dapat dimuat ulang sepenuhnya.
+ 
+20.	Setelah menjalankan sudo reboot, sistem meminta password pengguna untuk verifikasi hak akses administrator. Password harus dimasukkan agar perintah restart dapat dijalankan oleh sistem.
+   
+21.	Tampilan ini menunjukkan proses booting (startup) sistem Ubuntu. Logo Ubuntu dan indikator loading menandakan sistem sedang melakukan proses inisialisasi sebelum masuk ke desktop.
+22.	Tampilan ini menunjukkan desktop Ubuntu setelah proses booting selesai. Sistem telah berhasil masuk ke antarmuka utama dan siap digunakan oleh pengguna.
+23.	Perintah sudo shutdown now digunakan untuk mematikan sistem secara langsung.Perintah ini dijalankan dengan hak akses administrator agar sistem dapat dihentikan dengan aman.
+24.	Saat menjalankan sudo shutdown now, sistem meminta password sebagai verifikasi. Password yang dimasukkan pertama salah, sehingga muncul pesan “Maaf, coba lagi”, lalu sistem meminta password ulang agar proses shutdown bisa dilanjutkan
+25.	Tampilan ini menunjukkan proses sistem saat sedang melakukan shutdown atau restart. Logo Ubuntu dan indikator loading menandakan sistem sedang dalam proses penutupan atau pemuatan ulang. 
+26.	Tampilan ini merupakan halaman utama Oracle VirtualBox Manager. Terlihat mesin virtual Ubuntu dalam keadaan dimatikan, serta tersedia menu untuk mengatur, menjalankan, dan membuat snapshot sistem.
+27.	Tampilan ini menunjukkan desktop Ubuntu yang sedang aktif.
+Sistem telah berjalan normal dengan antarmuka grafis dan siap digunakan untuk menjalankan berbagai aplikasi.
+
+   
+28.	Perintah sudo shutdown -h 12:58 digunakan untuk menjadwalkan sistem agar mati pada waktu tertentu. Pada kasus ini, sistem akan otomatis shutdown pada pukul 12:58 dengan hak akses administrator.
+   
+29.	Perintah sudo shutdown -r 12:58 digunakan untuk menjadwalkan restart sistem pada waktu tertentu. Sistem menampilkan bahwa reboot telah dijadwalkan pada pukul 12:58, dan dapat dibatalkan menggunakan perintah shutdown -c.
+   
+30.	Tampilan ini menunjukkan proses restart sistem Ubuntu yang sedang berlangsung. Logo Ubuntu dan indikator loading menandakan sistem sedang melakukan boot ulang sesuai perintah yang dijalankan sebelumnya.
+
+   
+
+31.	Tampilan ini merupakan halaman login Ubuntu. Pengguna diminta memilih akun dan memasukkan password untuk masuk ke sistem.
+   
+32.	Tampilan ini menunjukkan proses login pengguna di Ubuntu. Pengguna memasukkan password untuk masuk ke sistem melalui akun yang tersedia.
+
+   
+33.	Tampilan ini menunjukkan desktop Ubuntu setelah pengguna berhasil login.
+Sistem sudah aktif dan siap digunakan untuk menjalankan aplikasi maupun perintah.
+   
+34.	Perintah sudo shutdown -r 12:58 berhasil dijalankan untuk menjadwalkan restart sistem. Sistem menampilkan bahwa reboot akan dilakukan pada waktu yang ditentukan dan dapat dibatalkan dengan shutdown -c.
+
+   
+35.	Tampilan ini menunjukkan desktop Ubuntu yang sedang aktif setelah sistem berjalan kembali. Sistem telah siap digunakan dan tidak sedang dalam proses shutdown atau restart.
+
+   
+36.	Perintah sudo shutdown -h 13:25 digunakan untuk menjadwalkan sistem mati pada waktu tertentu. Pada tampilan ini, sistem akan melakukan shutdown otomatis pada pukul 13:25 dengan hak akses administrator.
+
+   
+37.	Perintah sudo shutdown -h 13:25 berhasil menjadwalkan proses shutdown sistem. Sistem menampilkan bahwa komputer akan mati pada pukul 13:25 dan dapat dibatalkan dengan perintah shutdown -c.
+   
+38.	Tampilan ini menunjukkan proses shutdown sistem Ubuntu yang sedang berlangsung. Logo Ubuntu dan indikator loading menandakan sistem sedang dimatikan sesuai jadwal yang telah ditentukan.
+
+
+39.	Tampilan ini menunjukkan Oracle VirtualBox Manager setelah sistem Ubuntu dimatikan. Mesin virtual berada dalam status “Dimatikan”, menandakan sistem sudah berhasil shutdow
+
